@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <img class="bg" src="assets/images/graph.png" alt="">
+    <header class="header">
+      <h1 class="header__title">quiz</h1>
+    </header>
+    <main class="main hide">
+      <div class="question">
+        <h2 class="question__title">pytanie nr <span class="question__title--number">1</span></h2>
+        <p class="question__content">test</p>
+      </div>
+      <div class="answer">
+        <div class="answer-version">
+            <h2 class="answer-version__choose">odpowiedź a</h2>
+            <p class="answer-version__content">test</p>
+        </div>
+        <div class="answer-version">
+            <h2 class="answer-version__choose">odpowiedź b</h2>
+            <p class="answer-version__content">test</p>
+        </div>
+        <div class="answer-version">
+            <h2 class="answer-version__choose">odpowiedź c</h2>
+            <p class="answer-version__content">test</p>
+        </div>
+      </div>
+      <button class="next-btn">następne pytanie</button>
+      <div class="counter">
+
+        <p class="counter__min">0</p>
+        <span class="counter__colon">:</span>
+        <p class="counter__sec">0</p>
+      </div>
+    </main>
+    <button class="start-btn">zaczynamy</button>
+    <script src="assets/script.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Staatliches', cursive;
+
+}
+
+.bg {
+    position: absolute;
+    z-index: -1;
+    left: 20%;
+    top: 0;
+    width: 50%;
+    height: auto;
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
+
+    &__title {
+        font-size: 5rem;
+        letter-spacing: 1.3rem;
+    }
+}
+
+.main {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+
+    .question {
+        margin-bottom: 2rem;
+
+        &__title {
+            font-size: 1.8rem;
+            letter-spacing: 0.4rem;
+        }
+
+        &__content {
+            font-size: 2rem;
+            letter-spacing: 0.2rem;
+            font-weight: 900;
+        }
+    }
+
+    .answer {
+
+        &-version {
+
+            &__choose {
+                font-size: 1.5rem;
+                letter-spacing: 0.4rem;
+            }
+
+            &__content {
+                display: inline-block;
+                position: relative;
+                font-size: 1.7rem;
+                letter-spacing: 0.2rem;
+                cursor: pointer;
+                margin-bottom: 2rem;
+                transition: all 0.3s linear;
+                overflow: hidden;
+
+                // &:hover{
+                //     vertical-align: middle;
+                //     transform: translateY(-0.1em);
+                // }
+
+                &.active{
+                    transform: scale(1.4);
+                    color: red;
+                    text-shadow: 2px 2px 2px #000;
+                    text-decoration: underline;
+                    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+    }
+
+    .next-btn {
+        font-size: 1.5rem;
+        padding: 15px 30px;
+        cursor: pointer;
+        transition: all 0.3s linear;
+    }
+    .counter{
+        margin: 3rem 0;
+
+        &__sec{
+            // animation: counter 1s linear infinite;
+           
+        }
+
+        &__min, &__sec, &__colon{
+            display: inline-block;
+            font-size: 4rem;
+        }
+    }
+}
+
+.start-btn {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 2.5rem;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes counter {
+   50%{
+    opacity: 0;;
+   }
+}
+
+@media only screen and (max-width: 1200px) {
+   .bg{
+    width: 70%;
+    left: 10%;
+   }
+}
+@media only screen and (max-width: 800px) {
+    .bg{
+     width: 100%;
+     left: 0%;
+    }
+ }
