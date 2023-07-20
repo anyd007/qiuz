@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .kostka-kontener {
+        position: relative;
+        overflow: hidden;
+        height: 50px;
+        text-align: center;
+      }
+
+      .kostka-kontener h2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-100%);
+        animation: scroll 1s linear infinite;
+        animation-play-state: paused;
+        font-size: 3rem;
+      }
+      button {
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateY(-100%);
+        }
+        50% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(100%);
+        }
+      }
+    </style>
+
+    <div class="kostka-kontener">
+      <h2>0</h2>
+    </div>
+    <button>losój</button>
+    <script>
+      const kostka = document.querySelector("h2");
+      const guzik = document
+        .querySelector("button")
+        .addEventListener("click", () => {
+          const intervalId = setInterval(() => {
+            let lottery = Math.floor(Math.random(kostka) * 12);
+            kostka.textContent = lottery;
+          }, 1000);
+        });
+    </script>
+  </body>
+</html>

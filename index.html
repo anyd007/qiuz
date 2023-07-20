@@ -9,7 +9,7 @@
   <body>
     <img class="bg" src="assets/images/graph.png" alt="">
     <header class="header">
-      <h1 class="header__title">quiz</h1>
+      <h1 class="header__title" data-text="quiz">quiz</h1>
     </header>
     <main class="main hide">
       <div class="question">
@@ -31,6 +31,7 @@
         </div>
       </div>
       <button class="next-btn">następne pytanie</button>
+      
       <div class="counter">
 
         <p class="counter__min">0</p>
@@ -39,6 +40,22 @@
       </div>
     </main>
     <button class="start-btn">zaczynamy</button>
+    <button class="result-btn hide">sprawdź wyniki</button>
+
+    <div class="modal hide">
+      <button>zamknij</button>
+      <div class="modal-score">
+        <div class="user-score">
+        <p>twój wynik:</p>
+        <p class="user-score__value"></p>
+        </div>
+        <div class="quiz-overall">
+        <p>ilość pytań:</p>
+        <p class="quiz-overall__value"></p>
+      </div>
+    </div>
+    <div class="all-questions"></div>
+    </div>
     <script src="assets/script.js" type="module"></script>
   </body>
 </html>
