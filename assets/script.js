@@ -58,6 +58,7 @@ const startQiuz = () => {
     localStorage.removeItem('userAnswersTable')
     startBtn.classList.add("hide")
     mainView.classList.remove("hide")
+    questionNumber.textContent = 1
     questionContent.textContent = quiz[0].question
     answerContent.forEach((answer, indexAnswers) => {
         answer.textContent = quiz[0].answers[indexAnswers]
@@ -99,7 +100,7 @@ const nextQuestion = () => {
         localStorage.setItem('userAnswersTable', userAnswersJSON)
 
         nextBtn.textContent = "następne pytanie"
-        questionNumber.textContent = questionsCounter
+       
         questionContent.textContent = quiz[questionsCounter].question
         answerContent.forEach((answer, indexAnswers) => {
             quiz[questionsCounter].answers.forEach((el, i) => {
@@ -110,6 +111,7 @@ const nextQuestion = () => {
         })
         questionsCounter++
         isAnswer = false
+        questionNumber.textContent = questionsCounter
     }
 }
 
@@ -121,7 +123,7 @@ const quizResult = () => {
     let userAnswers = JSON.parse(userAnswersJSON)
 
     questionsValue.textContent = quiz.length
-    score.textContent = currentAnswers.filter((el ,i) =>el === userAnswers[i]).length
+    score.textContent = currentAnswers.filter((el ,i) =>el === userAnswers[i]).length 
     for (let i = 0; i < quiz.length; i++) {
 
         let questionCount = document.createElement('p')
